@@ -3,7 +3,7 @@
 <jsp:include page="top.jsp"/>
 <link rel="stylesheet" href="${css}/home/main.css" />
     <div class="grid-item" id="left">
-    	고객 전용<br /><br />
+    	고객 전용 ${time} <br /><br />
     	<a href="#" id="cust_join" >회원가입</a><br />
     	<a href="#" id="cust_login" >로 그 인</a>
     </div>
