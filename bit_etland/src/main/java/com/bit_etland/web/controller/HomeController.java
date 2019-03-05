@@ -15,8 +15,7 @@ public class HomeController {
 	public String home(Model m) {
 		System.out.println("입장");
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년mm월dd일");
-		m.addAttribute("serverTime",sdf.format(new Date()));
+		m.addAttribute("serverTime", new SimpleDateFormat("yyyy년MM월dd일").format(new Date()));
 		return "home";
 	}
 }
