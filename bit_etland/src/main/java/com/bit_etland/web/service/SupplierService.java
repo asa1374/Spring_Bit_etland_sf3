@@ -2,8 +2,10 @@ package com.bit_etland.web.service;
 
 import java.util.List;
 
-import com.bit_etland.web.domain.SupplierDTO;
+import org.springframework.stereotype.Component;
 
+import com.bit_etland.web.domain.SupplierDTO;
+@Component
 public interface SupplierService {
 	public void registSupplier(SupplierDTO sup);
 	public List<SupplierDTO> bringSupplierList();

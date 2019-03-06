@@ -2,9 +2,11 @@ package com.bit_etland.web.mapper;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.bit_etland.web.domain.ShipperDTO;
 
-
+@Component
 public interface ShipperMapper {
 	public void registShipper(ShipperDTO ship);
 	public List<ShipperDTO> bringShipperList();

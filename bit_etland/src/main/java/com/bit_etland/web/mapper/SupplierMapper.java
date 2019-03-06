@@ -2,9 +2,11 @@ package com.bit_etland.web.mapper;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.bit_etland.web.domain.SupplierDTO;
 
-
+@Component
 public interface SupplierMapper {
 	public void registSupplier(SupplierDTO sup);
 	public List<SupplierDTO> bringSupplierList();
