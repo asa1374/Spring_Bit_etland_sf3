@@ -27,7 +27,7 @@ $('#emp_register').click(function(){
 	location.assign('employee.do?cmd=move&page=register');
 });
 $('#cust_login').click(function(){
-	location.assign('customer.do?cmd=move&page=signin');
+	location.assign('${ctx}/move/customer/signin');
 });
 $('#emp_access').click(function(){
 	location.assign('employee.do?cmd=move&page=access');
