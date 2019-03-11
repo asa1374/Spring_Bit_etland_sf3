@@ -19,9 +19,6 @@
 			<button type="button" class="btn btn-default btn-lg">
 			  <span class="glyphicon glyphicon-remove" aria-hidden="true">취소</span> 
 			</button>
-		    <input type="hidden" name="cmd" value="signin" />
-		    <input type="hidden" name="dir" value="category" />
-		    <input type="hidden" name="page" value="main" />
 	</form>
 </div>
 <script>
@@ -29,7 +26,7 @@ $('#confirm_btn').click(function(){
 	var name = $('#name').val();
 	$('#form')
 	.attr('action','${ctx}/customer/signin')
-	.attr('method','POST')
+	.attr('method','post')
 	.submit();
 });
 </script>

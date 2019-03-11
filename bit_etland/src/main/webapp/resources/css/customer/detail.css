@@ -26,12 +26,11 @@
 #side_menu{
     grid-column-start: 1;
     grid-column-end: 2;
-    background-color: #fff;
+    background-color: fb7171;
 }
 #photo{
     grid-column-start: 1;
     grid-column-end: 2;
-    background-color: #fff;
 }
 #update{
     grid-column-start: 2;

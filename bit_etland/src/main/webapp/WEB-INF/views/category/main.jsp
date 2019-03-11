@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:include page="../home/top.jsp"/>
 <link rel="stylesheet" href="${css}/category/navi.css" />
 <div class="grid-item" id="grid-navi">
 	<div class="grid-category">
@@ -47,7 +46,6 @@
 		</div>
 	</div>
 </div>
-<jsp:include page="../home/bottom.jsp"/>  
 <script>
 $('#navi2').click(function(){
 	alert('마이페이지 클릭');
