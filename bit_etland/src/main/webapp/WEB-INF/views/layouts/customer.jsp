@@ -12,7 +12,7 @@
 		<nav id="main-nav">
 			<tiles:insertAttribute name="nav" />
 		</nav>
-		<div id="header" class="home" style="background: url('/resources/images/home-bg.jpg') repeat scroll center center / cover;">
+		<div id="header" class="home">
 			<tiles:insertAttribute name="top" />
 		</div>
 		<div id="journal" class="text-left paddsection">

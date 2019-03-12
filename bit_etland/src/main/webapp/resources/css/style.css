@@ -1,14 +1,4 @@
 
-/*
-  Theme Name: Folio
-  Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-  Author: BootstrapMade.com
-  Author URL: https://bootstrapmade.com
-*/
-
-/*  General Styling
-/*-----------------------------------------------------------------------------------*/
-
 body {
   background: #ffffff;
   color: #898989;
@@ -61,7 +51,7 @@ a:hover {
 }
 
 a:hover, a:focus {
-  color: #b8a07e;
+  color: #292929;
   text-decoration: underline;
 }
 
@@ -70,7 +60,7 @@ nav ul li a {
   position: relative;
   display: block;
   font-size: 12px;
-  color: #999999;
+  color: #292929;
   letter-spacing: 0.1em;
   font-weight: 500;
   line-height: 14px;
@@ -86,7 +76,7 @@ p {
   margin: 25px 0;
   padding: 0;
   font-size: 15px;
-  color: #999999;
+  color: #292929;
   line-height: 28px;
 }
 
@@ -240,84 +230,84 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #header {
-
-  height: 100vh;
-  width: 100%;
+	background: url("/web/resources/images/home-bg.jpg") repeat scroll center center / cover;
+	height: 100vh;
+	width: 100%;
 }
 
 
 #header .header-content {
-  height: 100vh;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+	height: 100vh;
+	text-align: left;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .header-content h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: #fff;
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #fff;
 }
 
 .header-content p {
-  font-size: 13px;
-  letter-spacing: 5px;
-  margin-top: 0;
-  margin-bottom: 30px;
-  text-transform: capitalize;
-  color: #fff;
-  font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 5px;
+	margin-top: 0;
+	margin-bottom: 30px;
+	text-transform: capitalize;
+	color: #fff;
+	font-weight: 500;
 }
 
 .header-content .list-social li {
-  float: left;
-  margin-right: 20px;
+	float: left;
+	margin-right: 20px;
 }
 
 .header-content .list-social li i {
-  color: #fff;
-  font-size: 15px;
+	color: #fff;
+	font-size: 15px;
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  Aout-us
+/*  About-us
 /*-----------------------------------------------------------------------------------*/
 
 #about {
-  width: 100%;
-  height: auto;
-  background: #f7f7f7;
-  padding-top: 190px;
+	width: 100%;
+	height: auto;
+	background: #f7f7f7;
+	padding-top: 190px;
 }
 
 #about .div-img-bg {
-  padding-bottom: 30px;
-  border: 20px solid #b8a07e;
+	padding-bottom: 30px;
+	border: 20px solid #b8a07e;
 }
 
 #about .div-img-bg .about-img img {
-  width: 100%;
-  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
-  margin-top: -60px;
-  margin-left: 40px;
-  height: 400px;
-  object-fit: cover;
+	width: 100%;
+	box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+	margin-top: -60px;
+	margin-left: 40px;
+	height: 400px;
+	object-fit: cover;
 }
 
 #about .about-descr .p-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  text-align: left;
+	font-family: 'Playfair Display', serif;
+	font-size: 28px;
+	text-align: left;
 }
 
 #about .about-descr .separator {
-  max-width: 80%;
-  margin-bottom: 0;
-  text-align: left;
+	max-width: 80%;
+	margin-bottom: 0;
+	text-align: left;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -325,61 +315,61 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #services {
-  background: #f7f7f7;
-  position: relative;
-  padding-bottom: 80px;
+	background: #ffffff;
+	position: relative;
+	padding-bottom: 80px;
 }
 
 .owl-item {
-  float: left;
+	float: left;
 }
 .services-block span {
-  margin: 10px 0;
-  position: relative;
-  font-size: 13px;
-  color: #292929;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-  text-transform: uppercase;
-  display: block;
+	margin: 10px 0;
+	position: relative;
+	font-size: 13px;
+	color: #292929;
+	letter-spacing: 0.1em;
+	font-weight: 500;
+	text-transform: uppercase;
+	display: block;
 }
 
 .services-block .separator {
-  margin: 0;
-  font-size: 13px;
-  line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+	line-height: 22px;
 }
 
 .services-block i {
-  font-size: 44px;
-  color: #b8a07e;
-  line-height: 44px;
+	font-size: 44px;
+	color: #b8a07e;
+	line-height: 44px;
 }
 
 
 .services-carousel  .owl-stage-outer {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .services-carousel .owl-dots {
-  margin-top: 5px;
-  text-align: center;
+	margin-top: 5px;
+	text-align: center;
 }
 
 .services-carousel .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px !important;
-  height: 12px !important;
-  border-radius: 50%;
-  border: 0;
-  padding: 0 !important;
-  background-color: #ddd;
-  cursor: pointer;
+	display: inline-block;
+	margin: 0 5px;
+	width: 12px !important;
+	height: 12px !important;
+	border-radius: 50%;
+	border: 0;
+	padding: 0 !important;
+	background-color: #ddd;
+	cursor: pointer;
 }
 
 .services-carousel .owl-dot.active {
-  background-color: #b8a07e;
+	background-color: #b8a07e;
 }
 
 .owl-nav {
@@ -452,12 +442,12 @@ nav ul li a {
 /*  Journal
 /*-----------------------------------------------------------------------------------*/
 
-#journal,  #journal-blog {
-  height: auto;
-  width: 100%;
-  background: #f7f7f7;
-  padding-bottom: 60px;
-  position: relative;
+#journal{
+	height: auto;
+	width: 100%;
+	background: #ffffff;
+	padding-bottom: 60px;
+	position: relative;
 }
 
 #journal-blog {
@@ -518,8 +508,9 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #contact {
-  height: auto;
-  width: 100%;
+	background: url("/web/resources/images/changjun.jpg") repeat scroll center center / cover;
+	height: auto;
+	width: 100%;
 }
 
 .contact-details {
@@ -574,7 +565,7 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #footer {
-  background: #f7f7f7;
+  background: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px;
 }
