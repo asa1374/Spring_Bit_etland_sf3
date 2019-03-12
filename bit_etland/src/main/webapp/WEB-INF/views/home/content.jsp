@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <div class="container">
       <div class="contact-block1">
         <div class="row">
@@ -9,10 +10,10 @@
               <h2 class="mb-30">GET IN TOUCH</h2>
 
               <ul class="contact-details">
-                <li><span>23 Main, Street</span></li>
-                <li><span>New York, United States</span></li>
-                <li><span>+88 01912704287</span></li>
-                <li><span>example@example.com</span></li>
+                <li><span>93.06.05</span></li>
+                <li><span>Seoul, Korea</span></li>
+                <li><span>010-5899-1374</span></li>
+                <li><span>asa1374@gmail.com</span></li>
               </ul>
 
             </div>
@@ -62,4 +63,5 @@
           </div>
         </div>
       </div>
-    </div>    
+    </div>
+

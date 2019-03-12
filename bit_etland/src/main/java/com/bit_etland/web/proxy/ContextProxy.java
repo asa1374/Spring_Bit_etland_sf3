@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Component
-@SessionAttributes({"ctx","css","js","img","time"})
+@SessionAttributes({"ctx","css","js","img","time","contact"})
 public class ContextProxy {
 	@Autowired HttpSession session;
 	@Autowired HttpServletRequest request;
@@ -20,8 +20,9 @@ public class ContextProxy {
 		session.setAttribute("ctx",ctx);
 		session.setAttribute("css", ctx + "/resources/css/");
 		session.setAttribute("js", ctx + "/resources/js/");
-		session.setAttribute("img", ctx + "/resources/img/");
+		session.setAttribute("images", ctx + "/resources/images/");
 		session.setAttribute("time", new SimpleDateFormat("yyyy년MM월dd일 hh:mm:ss").format(new Date()));
+		session.setAttribute("contact", ctx + "/resources/contactform/");
 	}
 
 }
