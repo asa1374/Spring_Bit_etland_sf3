@@ -6,13 +6,14 @@
 	@파일명: intro.jsp
 	@기능: 인트로 템플릿 페이지, 로그인, 회원가입화면
 -->
+<!-- aaa -->
 <jsp:include page="common.jsp"></jsp:include>
 <body>
 	<div id="wrapper" class="grid-container container-fluid">
 		<nav id="main-nav">
 			<tiles:insertAttribute name="nav" />
 		</nav>
-		<div id="header" class="home" style="background: url('resources/images/home-bg.jpg') repeat scroll center center / cover;">
+		<div id="header" class="home">
 			<tiles:insertAttribute name="top" />
 		</div>
 		<div id="journal" class="text-left paddsection">
