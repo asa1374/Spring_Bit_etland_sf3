@@ -13,6 +13,7 @@
   <definition name="public:*/*.tiles" extends="public">
     <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
   </definition>
+  
   <definition name="customer" template="/WEB-INF/views/layouts/customer.jsp">
     <put-attribute name="top" value="/WEB-INF/views/home/top.jsp" />
     <put-attribute name="nav" value="/WEB-INF/views/home/nav.jsp" />
@@ -23,6 +24,7 @@
   <definition name="customer:*/*.tiles" extends="customer">
     <put-attribute name="blog" value="/WEB-INF/views/{1}/{2}.jsp" />
   </definition>
+  
   <definition name="employee" template="/WEB-INF/views/layouts/employee.jsp">
     <put-attribute name="top" value="/WEB-INF/views/home/top.jsp" />
     <put-attribute name="nav" value="" />
