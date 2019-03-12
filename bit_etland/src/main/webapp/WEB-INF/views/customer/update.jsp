@@ -38,7 +38,7 @@
 <div class="grid-item" id="update">
 	<span class="label label-info" id="confirm_btn">수정</span>
 </div>
-<script>
+<!-- <script>
 $('#confirm_btn').attr('style','cursor:pointer').click(function(){
 	$('#update_form')
 	.attr('action','${ctx}/customer/update')
@@ -48,4 +48,4 @@ $('#confirm_btn').attr('style','cursor:pointer').click(function(){
 $('#photo_btn').attr('style','cursor:pointer').click(function(){
 	alert('사진업로드 클릭');
 });
-</script>
+</script> -->

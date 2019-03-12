@@ -17,11 +17,8 @@
               <a href="blog-single.html"><img src="${images}/blog-post-1.jpg" class="img-responsive" alt="img"></a>
 
               <div class="journal-txt">
-
-                <h4><a href="blog-single.html">SO LETS MAKE THE MOST IS BEAUTIFUL</a></h4>
-                <p class="separator">To an English person, it will seem like simplified English
-                </p>
-
+                <h4><a id="signin_btn">회원 로그인</a></h4>
+                <span id="">회원 가입</span>
               </div>
 
             </div>
@@ -34,9 +31,8 @@
 
               <div class="journal-txt">
 
-                <h4><a href="#blog-single.html">WE'RE GONA MAKE DREAMS COMES</a></h4>
-                <p class="separator">To an English person, it will seem like simplified English
-                </p>
+                <h4><a href="#blog-single.html">관리자 로그인</a></h4>
+                <h4><a href="#blog-single.html">관리자 등록</a></h4>
 
               </div>
 
@@ -62,3 +58,8 @@
         </div>
       </div>
     </div>
+<script>
+$('#signin_btn').attr('style','cursor:pointer').click(function(){
+	location.assign('${ctx}/move/customer/signin');
+});
+</script>

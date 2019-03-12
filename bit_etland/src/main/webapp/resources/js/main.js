@@ -8,7 +8,7 @@ $(document).ready(function() {
   // ========================================================================= //
 
 
-  $(document).on("scroll", onScroll);
+  /*$(document).on("scroll", onScroll);
 
   $('a[href^="#"]').on('click', function(e) {
     e.preventDefault();
@@ -33,10 +33,10 @@ $(document).ready(function() {
       window.location.hash = target.selector;
       $(document).on("scroll", onScroll);
     });
-  });
+  });*/
 
 
-  function onScroll(event) {
+/*  function onScroll(event) {
     if ($('.home').length) {
       var scrollPos = $(document).scrollTop();
       $('nav ul li a').each(function() {
@@ -44,14 +44,14 @@ $(document).ready(function() {
         var refElement = $(currLink.attr("href"));
       });
     }
-  }
+  }*/
 
   // ========================================================================= //
   //  //NAVBAR SHOW - HIDE
   // ========================================================================= //
 
 
-  $(window).scroll(function() {
+/*  $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll > 200 ) {
       $("#main-nav, #main-nav-subpage").slideDown(700);
@@ -61,15 +61,15 @@ $(document).ready(function() {
       $("#main-nav-subpage").hide();
       $("#main-nav-subpage").addClass('subpage-nav');
     }
-  });
+  });*/
 
   // ========================================================================= //
   //  // RESPONSIVE MENU
   // ========================================================================= //
 
-  $('.responsive').on('click', function(e) {
+/*  $('.responsive').on('click', function(e) {
     $('.nav-menu').slideToggle();
-  });
+  });*/
 
   // ========================================================================= //
   //  Typed Js
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Alex Smith.", "Designer.", "Developer.", "Freelancer.", "Photographer"],
+      strings: ["Developer."],
       typeSpeed: 100,
       loop: true,
     });
@@ -154,4 +154,26 @@ $(document).ready(function() {
   // Call the functions
   magnifPopup();
 
+  $('#signin_btn').attr('style','cursor:pointer').click(function(){
+		location.assign('/web/move/customer/signin');
+	});
+  
+  $('#confirm_btn').click(function(){
+		var name = $('#name').val();
+		$('#form')
+		.attr('action','/web/customer/signin')
+		.attr('method','post')
+		.submit();
+	});
+  
+  $('#update_btn').attr('style','cursor:pointer').click(function(){
+		location.assign('/web/move/customer/update');
+	});
+  
+  $('#confirm_btn').attr('style','cursor:pointer').click(function(){
+		$('#update_form')
+		.attr('action','/web/customer/update')
+		.attr('method','post')
+		.submit();
+	});
 });

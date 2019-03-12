@@ -27,7 +27,7 @@ public class CustomerCotroller {
 	public String signin(@ModelAttribute CustomerDTO param, Model session) {
 		cust = customerservice.retrieveCustomer(param);
 		session.addAttribute("cust", cust);
-		return (cust != null) ? "public:customer/detail.tiles" : "public:home/main.tiles";
+		return (cust != null) ? "customer:customer/main.tiles" : "public:home/main.tiles";
 	}
 	
 	@RequestMapping(value="/detail") 

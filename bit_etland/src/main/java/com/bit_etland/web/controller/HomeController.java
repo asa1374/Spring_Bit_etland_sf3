@@ -18,7 +18,6 @@ import com.bit_etland.web.proxy.ContextProxy;
 
 
 @Controller
-@SessionAttributes({"ctx","css","js","img","time"})
 public class HomeController {
 	static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	@Autowired ContextProxy pxy;
@@ -35,6 +34,6 @@ public class HomeController {
 			@PathVariable String page) {
 		logger.info("\n --------- MOVE to  {} !! ----------",dir+"/"+page);
 		
-		return String.format("public:%s/%s.tiles",dir,page);
+		return String.format("customer:%s/%s.tiles",dir,page);
 	}
 }
