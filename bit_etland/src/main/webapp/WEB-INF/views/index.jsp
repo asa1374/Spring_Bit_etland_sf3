@@ -34,29 +34,19 @@
 <body>
 	<div id="wrapper" class="grid-container container-fluid">
 		<nav id="main-nav">
-			<div id="nav">
-			
-			</div>
+			<div id="nav"></div>
 		</nav>
 		<div id="header" class="home">
-			<div id="top">
-			
-			</div>
+			<div id="top"></div>
 		</div>
 		<div id="journal" class="text-left paddsection">
-			<div id="blog">
-			
-			</div>
+			<div id="blog"></div>
 		</div>
 		<div id="contact" class="paddsection">
-			<div id="content">
-			
-			</div>
+			<div id="content"></div>
 		</div>
 		<div id="footer" class="text-center">
-			<div id="bottom">
-			
-			</div>
+			<div id="bottom"></div>
 		</div>
 	</div>
 <script src="${js}/jquery/jquery.min.js"></script>
@@ -73,6 +63,6 @@
 <script src="${js}/app.js"></script>
 </body>
 <script>
-app.context.init('${ctx}')
+app.path.init('${ctx}')
 </script>
 </html>
