@@ -7,5 +7,4 @@ import lombok.Data;
 @Data @Component
 public class CategoryDTO {
 	private String categoryID,categoryName,description;
-
 }

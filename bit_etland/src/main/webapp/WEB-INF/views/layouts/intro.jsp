@@ -34,7 +34,7 @@
 <script src="${js}/isotope/isotope.pkgd.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
-<script src="${contact}/contactform.js"></script>
+<script src="${js}/contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
 <script src="${js}/main.js"></script>

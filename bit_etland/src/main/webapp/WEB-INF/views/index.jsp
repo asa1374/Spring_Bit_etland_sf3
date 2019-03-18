@@ -48,7 +48,7 @@
 		<div id="footer" class="text-center">
 			<div id="bottom"></div>
 		</div>
-	</div>
+	</div>  
 <script src="${js}/jquery/jquery.min.js"></script>
 <script src="${js}/jquery/jquery-migrate.min.js"></script>
 <script src="${js}/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -57,7 +57,7 @@
 <script src="${js}/magnific-popup/magnific-popup.min.js"></script>
 <script src="${js}/isotope/isotope.pkgd.min.js"></script>
   <!-- Contact Form JavaScript File -->
-<script src="${contact}/contactform.js"></script>
+<script src="${js}/contactform/contactform.js"></script>
   <!-- Template Main Javascript File -->
 <script src="${js}/main.js"></script>
 <script src="${js}/app.js"></script>
