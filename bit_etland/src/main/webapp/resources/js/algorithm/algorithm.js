@@ -17,14 +17,24 @@ algo = (()=>{
 						{ id:'geo', val :'등비'},
 						{ id:'fac', val :'팩토리얼'},
 						{ id:'fibo', val :'피보나치'}];
-			sequence(arr);
+			$('#rm_start').before('<div id="del_start">');
+			$('#rm_end').after('<div id="del_end">');
+			$('#del_start').nextUntil('#del_end').remove();
+			$('#right_end').remove();
+			$('#right_content').prepend($$.div({id:'right_start'}));
+			$('#leave_a_comment').before('<div id="right_end"/>')
+			$('#right_start').nextUntil('#right_end')
+				.wrapAll('<div id="new_div"></div>');
+			let str = $('#new_div').html();
+			$('#new_div').remove();
+			sequence(arr,str);
+			
 			$('#su').addClass('cursor').click(()=>{
 				alert('수열을 누름');
-/*				let str = $($('#right_start').children().eq(0)).html();
+				let str = $($('#right_start').children().eq(0)).html();
 				$('#right_start').children().remove();
-				$('<div id="'+111+'">'+str+'</div>').appendTo('#right_start');*/
-				//$('#right_start > div').children('.form-group').empty();
-				sequence(arr);
+				sequence(arr,str);
+				$('#right_start').find('div').children('form').remove();
 			});
 			let ma = [
 				{ id:'ari', val :'최대값과 최솟값'},
@@ -44,10 +54,10 @@ algo = (()=>{
 			$('#ma').addClass('cursor').click(()=>{
 				alert('수학을 누름');
 				let str = $($('#right_start').children().eq(0)).html();
-				$($('#right_start').children()).remove();
-				$('<div id="'+111+'">'+str+'</div>').appendTo('#right_start');
-				$('.form-group').empty();
-				math(ma);
+				$('#right_start').empty();
+				$('#right_start').find('div').children('form').remove();
+				math(ma,str);
+				$('#right_start').find('div').children('form').remove();
 			});
 			let ar = [
 				{ id:'ari', val :'행렬'},
@@ -62,9 +72,9 @@ algo = (()=>{
 				alert('배열을 누름');
 				let str = $($('#right_start').children().eq(0)).html();
 				$($('#right_start').children()).remove();
-				$('<div id="'+111+'">'+str+'</div>').appendTo('#right_start');
+				$('<div>'+str+'</div>').appendTo('#right_start');
 				$('.form-group').remove();
-				sequence(ar);
+				sequence(ar,str);
 			});
 		});
 	};

@@ -1,11 +1,6 @@
-function sequence(arr){
-		_sequence.dugi_remove();
-		$('#right_content').prepend($$.div({id:'right_start'}));
-		$('#leave_a_comment').before('<div id="right_end"/>')
-		$('#right_start').nextUntil('#right_end')
-			.wrapAll('<div id="new_div"></div>');
-		let str = $('#new_div').html();
-		$('#new_div').remove();
+function sequence(arr,str){
+		
+
 		//$('#right_start').remove();
 		$.each(arr,(i,j)=>{
 			let GID = Math.floor(Math.random()*10000)+1;
