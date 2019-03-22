@@ -1,85 +1,113 @@
-var algo = algo || {};
-algo = (()=>{
-	let init = x =>{
-		algo.$.init(x);
-	};
-	let onCreate = ()=>{
-		setContentView();
-	};
-	let setContentView = ()=>{
-		$.when(
-				$.getScript($.js()+'/component/compo.js'),
-				$.getScript($.js()+'/algorithm/sequence.js'),
-				$.getScript($.js()+'/algorithm/math.js')
-		).done(()=>{
-			common();
-			let arr = [
-				{ id:'ari', val :'등차'},
-				{ id:'geo', val :'등비'},
-				{ id:'fac', val :'팩토리얼'},
-				{ id:'fibo', val :'피보나치'}
-				];
-			sequence(arr);
-			$('#su').addClass('cursor').click(()=>{
-				alert('수열을 누름');
-				let str = $($('#right_start').children().eq(0)).html();
-				$($('#right_start').children()).remove();
-				$('<div id="'+111+'">'+str+'</div>').appendTo('#right_start');
-				$('.form-group').remove();
-				sequence(arr);
+function math(arr){
+		$('#right_content').prepend($$.div({id:'right_start'}));
+		$('#leave_a_comment').before('<div id="right_end"/>')
+		$('#right_start').nextUntil('#right_end')
+			.wrapAll('<div id="new_div"></div>');
+		let str = $('#new_div').html();
+		$('#new_div').remove();
+		$.each(arr,(i,j)=>{
+			let GID = Math.floor(Math.random()*10000)+1;
+			let _GID = '#'+GID;
+			$('<div id="'+GID+'">'+str+'</div>').appendTo('#right_start');
+			let POST = GID+'_POST';
+			let _POST = '#'+POST;
+			$(_GID+' h4').attr('id',POST);
+			
+			let TITLE = GID+'_TITLE';
+			let _TITLE = '#'+TITLE;
+			$(_GID+' h2').attr('id',TITLE);
+			
+			let DATE = GID+'_DATE';
+			let _DATE = '#'+DATE;
+			$(_TITLE).siblings('h5').eq(0).attr('id',DATE);
+			
+			let BTN = GID+'_BTN';
+			let _BTN = '#'+BTN;
+			$(_TITLE).siblings('h5').eq(1).attr('id',BTN);
+			
+			let INPUT = GID+'_INPUT';
+			let _INPUT = '#'+INPUT;
+			$(_GID+' p').attr('id',INPUT);
+			
+			$(_TITLE).text(j.val);
+			$(_BTN).empty();
+			$(_INPUT).empty();
+			let x = [
+				{ cls:'start', txt :'시작값'},
+				{ cls:'end', txt :'한계값'},
+				{ cls:'diff', txt :'공차'}];;
+/*			switch(arr,(j.id)){
+			case 'ari' :
+				x = [
+					{ cls:'start', txt :'시작값'},
+					{ cls:'end', txt :'한계값'},
+					{ cls:'diff', txt :'공차'}];
+				break;
+			case 'geo' :
+				x = [
+					{ cls:'start', txt :'시작값'},
+					{ cls:'end', txt :'한계값'},
+					{ cls:'diff', txt :'공비'}];
+				break;
+			case 'fac' :
+				x = [
+					{ cls:'start', txt :'시작값'},
+					{ cls:'end', txt :'마지막'},
+					{ cls:'diff', txt :'없다'}];
+				break;
+			};*/
+			$(_math.dugi_input(x)).appendTo(_INPUT);
+			$('#del_start').remove();
+			$('#del_end').remove();
+			$('<span class="label label-danger" style="font-size: 20px"></span>')
+			.text('결과')
+			.addClass('cursor')
+			.attr('name',j.id)
+			.appendTo(_BTN).click(function(){
+				let that = $(this).attr('name');
+				let data = {
+						start : $(_INPUT+' .start').val(),
+						end : $(_INPUT+' .end').val(),
+						diff : $(_INPUT+' .diff').val()};
+				$.ajax({
+					url : $.ctx()+'/algo/seq/'+that,
+					type : 'post',
+					data : JSON.stringify(data),
+					dataType : 'json',
+					contentType : "application/json",
+					success : d=>{
+						$(_INPUT).empty();
+						$('<h2>결과값 : ' +d.result+'</h2>').appendTo(_INPUT);
+					},
+					error : e=>{
+						alert('결과 값 받아오기 실패');
+					}
+				});
 			});
-			let ma = [
-				{ id:'ari', val :'최대값과 최솟값'},
-				{ id:'geo', val :'합계와 평균'},
-				{ id:'fac', val :'팩토리얼'},
-				{ id:'a', val :'소수 판별'},
-				{ id:'b', val :'소인수 분해'},
-				{ id:'c', val :'배수와 공배수'},
-				{ id:'fibo', val :'약수와 완전수'},
-				{ id:'fibo', val :'최대공약수와 최소공배수'},
-				{ id:'fibo', val :'근사값 '},
-				{ id:'fibo', val :'1의 보수와 2의 보수'},
-				{ id:'fibo', val :'10진수와 2진수의 변환'},
-				{ id:'fibo', val :'10진수와 16진수의 변환'},
-				{ id:'fibo', val :'BCD 코드와 3초과 코드의 변환'},
-				{ id:'fibo', val :'패리티 비트 검증'}
-				];
-			$('#ma').addClass('cursor').click(()=>{
-				alert('수학을 누름');
-				let str = $($('#right_start').children().eq(0)).html();
-				$($('#right_start').children()).remove();
-				$('<div id="'+111+'">'+str+'</div>').appendTo('#right_start');
-				$('.form-group').remove();
-				sequence(ma);
-			});
-			let ar = [
-				{ id:'ari', val :'행렬'},
-				{ id:'geo', val :'직각 삼각형'},
-				{ id:'fac', val :'ㄹ자로채우기'},
-				{ id:'a', val :'다이아몬드'},
-				{ id:'b', val :'모래시계'},
-				{ id:'c', val :'오른쪽에 빈삼각형'},
-				{ id:'fibo', val :'이등변 삼각형'}
-				];
-			$('#ar').addClass('cursor').click(()=>{
-				alert('배열을 누름');
-				let str = $($('#right_start').children().eq(0)).html();
-				$($('#right_start').children()).remove();
-				$('<div id="'+111+'">'+str+'</div>').appendTo('#right_start');
-				$('.form-group').remove();
-				sequence(ar);
+	
+			$('<span class="label label-primary" style="margin-left: 20px; font-size: 20px"></span>').text('리셋').addClass('cursor')
+			.appendTo(_BTN)
+			.click(()=>{
+				$(_INPUT).empty();
+				$(_math.dugi_input(x)).appendTo(_INPUT);
 			});
 		});
-	};
-	return {init:init,
-		onCreate:onCreate};
-})();
-
-algo.$ = {
-	init : (x)=>{
-		$.getScript(x+'/resources/js/router.js',()=>{
-			$.extend(new Session(x));
-			algo.onCreate();
-		})
-	}
-};
+}
+var _math = {
+		dugi_input : (x)=>{
+			let html = '<form>';
+			$.each(x,(i,j)=>{
+				html += '<div class="form-group">';
+				html += '<label for=""">'+j.txt+' :</label>';
+				html += '<input type="text" class="'+j.cls+'"></input>';
+			});
+			html += '</form>';
+			return html;
+		},
+		dugi_remove: () =>{
+			$('#rm_start').before('<div id="del_start">');
+			$('#rm_end').after('<div id="del_end">');
+			$('#del_start').nextUntil('#del_end').remove();
+			$('#right_end').remove();
+		}
+}
