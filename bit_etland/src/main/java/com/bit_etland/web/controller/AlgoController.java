@@ -21,13 +21,12 @@ public class AlgoController {
 	static final Logger logger = LoggerFactory.getLogger(AlgoController.class);
 	@Autowired AlgoService algoService;
 	@Autowired Map<String,Object> map;
-	@RequestMapping(value="/seq/{questNum}",method=RequestMethod.POST)
+	@RequestMapping(value="/seq/{kind}",method=RequestMethod.POST)
 	@ResponseBody
 	public Map<String,Object> sequnce(
-		@PathVariable String questNum,
+		@PathVariable String kind,
 		@RequestBody Map<String, Object> param){
 		logger.info("-------------------algo","sequnce() 진입");
-		System.out.println("넘어온 문제 번호 : "+questNum);
 		map = new HashMap<String,Object>();
 		String start = (String) param.get("start");
 		String end = (String) param.get("end");
@@ -35,7 +34,21 @@ public class AlgoController {
 		map.put("start", start);
 		map.put("end", end);
 		map.put("diff", diff);
-		String result = algoService.arithmetic(map);
+		String result = "";
+		switch(kind) {
+		case "ari" : 
+			result = algoService.arithmetic(map);
+			break;
+		case "geo" :
+			result = algoService.geometric(map);
+			break;
+		case "fac" :
+			result = algoService.factorial(map);
+			break;
+		case "fibo" :
+			result = algoService.Fibonacci(map);
+			break;
+		}
 		map.put("result",result);
 		return map;
 	}

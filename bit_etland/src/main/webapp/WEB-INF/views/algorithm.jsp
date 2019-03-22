@@ -47,7 +47,7 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-      <h4>John's Blog</h4>
+      <h4>changjun Blog</h4>
       <ul class="nav nav-pills nav-stacked" id="nav">
         <li class="active"><a href="#section1">Home</a></li>
         <li><a href="#section2">Friends</a></li>
@@ -64,24 +64,25 @@
       </div>
     </div>
 
-    <div id="dugi_cont" class="col-sm-9">
-      <h4 id="dugi_start1"><small>RECENT POSTS</small></h4>
+    <div id="right_content" class="col-sm-9">
+    
+      <h4><small>RECENT POSTS</small></h4>
       <hr>
-      <h2 id="ex1">I Love Food</h2>
+      <h2>I Love Food</h2>
       <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
-      <h5 id="h5"><span id="res_btn_1" class="label label-danger">Food</span> <span id="reset_btn_1" class="label label-primary">Ipsum</span></h5><br>
-      <p id="res_1">Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br id="dugi_end1"><br>
+      <h5><span id="answer_btn" class="label label-danger">Food</span> <span id="reset_btn" class="label label-primary">Ipsum</span></h5><br>
+      <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><br>
       
-      <h4 id="dugi_start2"><small>RECENT POSTS</small></h4>
+      <h4 id="rm_start" ><small>RECENT POSTS</small></h4>
       <hr>
-      <h2 id="ex2">Officially Blogging</h2>
+      <h2>Officially Blogging</h2>
       <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
       <h5><span id="res_btn_2" class="label label-success">Lorem</span></h5><br>
-      <p id="res_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr id="dugi_end2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr id="rm_end">
 	
-      <h4>Leave a Comment:</h4>
+      <h4 id="leave_a_comment">Leave a Comment:</h4>
 	      <form role="form">
 	        <div class="form-group">
 	          <textarea class="form-control" rows="3" required></textarea>
@@ -129,7 +130,8 @@
   <p>Footer Text</p>
 </footer>
 
-<script src="${js}/algorithm.js"></script>
+<script src="${js}/algorithm/algorithm.js"></script>
+<script src="${js}/algorithm/sequence.js"></script>
 
 <script>
 algo.init('${ctx}')
