@@ -1,6 +1,4 @@
 function sequence(arr,str){
-		
-
 		//$('#right_start').remove();
 		$.each(arr,(i,j)=>{
 			let GID = Math.floor(Math.random()*10000)+1;
